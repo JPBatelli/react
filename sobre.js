@@ -3,19 +3,23 @@ class Paragrafo extends React.Component {
       return <p>{this.props.children}</p>
     }
 }
+
 class Negrito extends React.Component {
     render() {
       return <span style={{ fontWeight: 'bold' }}>{this.props.children}</span>;
     }
 }
+
 function Conteudo() {
     return (
     <div>
+
         <header id="cabecalho">
             <nav>
                 <object width="100%" height="200px" data="menu.html"></object>
             </nav>
         </header>
+
         <p>
             <Paragrafo>O <Negrito>Instituto Federal de Educação, Ciência e Tecnologia de São Paulo</Negrito> - é uma autarquia federal de ensino.</Paragrafo>
             <Paragrafo>Fundada em 1909, como Escola de Aprendizes Artífices, é reconhecida pela sociedade paulista por sua excelência no ensino público gratuito de qualidade. </Paragrafo>
@@ -25,12 +29,14 @@ function Conteudo() {
             <Paragrafo> O IFSP é organizado em diversos câmpus e possui mais de 40 mil alunos matriculados nas 36 unidades distribuídas pelo estado de São Paulo.; </Paragrafo>
             <Paragrafo>Localizado em <Negrito>Rua Pedro Vicente, 625 - Canindé - São Paulo - SP - Brasil - Cep: 01109-010</Negrito></Paragrafo>
         </p>
+
         <footer>
             <object width="100%" height="200px" data="rodape.html"></object>
         </footer>
     </div>
 );
 }
+
 // Render the component to the DOM
 ReactDOM.render(
     <Conteudo />,
